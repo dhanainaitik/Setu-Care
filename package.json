@@ -1,0 +1,10 @@
+﻿{
+  "name": "setucare-frontend",
+  "version": "1.0.0",
+  "description": "SetuCare Frontend — static files served with HTTPS for LAN development",
+  "scripts": {
+    "dev": "npx http-server . -p 8080 -a 0.0.0.0 --cors",
+    "dev:https": "npx http-server . -p 8080 -a 0.0.0.0 --cors -S -C ../backend/certs/server.crt -K ../backend/certs/server.key"
+  },
+  "devDependencies": {}
+}

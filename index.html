@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetuCare — Inclusive Digital Healthcare</title>
+  <meta name="description" content="SetuCare: AI-powered digital healthcare platform connecting patients, doctors, medical records, and healthcare services.">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .hero { min-height: 100vh; background: var(--gradient-dark); display: flex; align-items: center; justify-content: center; padding: 40px 24px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -200px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(15,82,186,0.25) 0%, transparent 70%); }
+    .hero::after { content: ''; position: absolute; bottom: -200px; right: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,201,167,0.2) 0%, transparent 70%); }
+    .hero-content { text-align: center; max-width: 700px; position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,201,167,0.15); border: 1px solid rgba(0,201,167,0.3); color: var(--secondary); padding: 6px 16px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; margin-bottom: 24px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 40px 0; }
+    .feature-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 20px; text-align: center; transition: all var(--duration) var(--ease); }
+    .feature-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-3px); }
+    @media(max-width:600px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-content fade-in">
+    <div class="hero-badge">🏆 Hackathon Demo · August 2026</div>
+    <div style="font-size:56px;margin-bottom:16px;">🏥</div>
+    <h1 style="font-family:var(--font-heading);font-size:52px;font-weight:800;color:white;margin-bottom:16px;line-height:1.1;">Setu<span style="color:var(--secondary);">Care</span></h1>
+    <p style="color:rgba(255,255,255,0.7);font-size:18px;line-height:1.7;margin-bottom:32px;">An inclusive digital healthcare layer connecting patients, doctors, medical records, and healthcare services through AI-powered translation and secure QR Health Cards.</p>
+
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;">
+      <a href="pages/login.html" class="btn btn-primary btn-lg">🚀 Get Started</a>
+      <a href="pages/register.html" class="btn btn-ghost btn-lg" style="color:white;border-color:rgba(255,255,255,0.3);">📝 Register as Patient</a>
+    </div>
+
+    <!-- Quick Demo Access -->
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:20px;margin-bottom:32px;">
+      <div style="font-size:13px;font-weight:700;color:var(--secondary);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:14px;">🎯 Quick Demo Access</div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <button onclick="quickLogin('9876543210','Patient@123')" class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,0.2);">👤 Patient (Rahul)</button>
+        <button onclick="quickLogin('9100000001','Doctor@123')" class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,0.2);">👨‍⚕️ Doctor (Dr. Sharma)</button>
+        <button onclick="quickLogin('9000000000','Admin@123')" class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,0.2);">⚙️ Admin</button>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card"><div style="font-size:28px;margin-bottom:10px;">📱</div><div style="font-weight:700;color:white;font-size:14px;margin-bottom:4px;">QR Health Card</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">Offline-first access</div></div>
+      <div class="feature-card"><div style="font-size:28px;margin-bottom:10px;">🤖</div><div style="font-weight:700;color:white;font-size:14px;margin-bottom:4px;">AI Translator</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">Gemini-powered</div></div>
+      <div class="feature-card"><div style="font-size:28px;margin-bottom:10px;">📅</div><div style="font-weight:700;color:white;font-size:14px;margin-bottom:4px;">Health Timeline</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">Lifelong records</div></div>
+      <div class="feature-card"><div style="font-size:28px;margin-bottom:10px;">💊</div><div style="font-weight:700;color:white;font-size:14px;margin-bottom:4px;">Digital Prescriptions</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">Doctor-approved</div></div>
+      <div class="feature-card"><div style="font-size:28px;margin-bottom:10px;">🏥</div><div style="font-weight:700;color:white;font-size:14px;margin-bottom:4px;">Hospital Discovery</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">+ Partner discounts</div></div>
+      <div class="feature-card"><div style="font-size:28px;margin-bottom:10px;">👨‍👩‍👧</div><div style="font-weight:700;color:white;font-size:14px;margin-bottom:4px;">Family Health</div><div style="font-size:12px;color:rgba(255,255,255,0.5);">Manage everyone</div></div>
+    </div>
+
+    <p style="font-size:11px;color:rgba(255,255,255,0.3);">⚠️ SetuCare is a healthcare record and communication platform. It does not provide medical diagnosis. All clinical decisions remain with the treating doctor.</p>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script>
+  // Redirect if already logged in
+  const existingUser = getUser();
+  if (existingUser && getToken()) {
+    const role = existingUser.role;
+    window.location.href = `pages/${role === 'admin' ? 'admin' : role}-dashboard.html`;
+  }
+
+  async function quickLogin(phone, password) {
+    showLoading();
+    try {
+      const res = await apiPost('/auth/login', { phone, password });
+      if (res?.success) {
+        setAuth(res.token, res.user);
+        const role = res.user.role;
+        window.location.href = `pages/${role === 'admin' ? 'admin' : role}-dashboard.html`;
+      } else {
+        showToast('Login failed. Make sure backend is running and database is seeded.', 'error');
+      }
+    } catch {
+      showToast('Cannot connect to backend. Run: cd backend && npm start', 'error');
+    }
+    hideLoading();
+  }
+</script>
+</body>
+</html>

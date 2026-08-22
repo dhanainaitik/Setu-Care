@@ -1,0 +1,46 @@
+# ── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Environment / Secrets ────────────────────────────────────────────────────
+# NEVER commit .env — it contains the MongoDB URI, JWT secret, Gemini API key
+.env
+.env.*
+!.env.example
+
+# ── Uploaded patient files ───────────────────────────────────────────────────
+uploads/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Build / dist ─────────────────────────────────────────────────────────────
+dist/
+build/
+
+# ── OS junk ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.pem
+*.p12
+.nyc_output/
+coverage/
+
+# ── Local HTTPS certificates (dev only — NEVER commit private keys) ───────────
+certs/
+*.key
+*.crt
+*.csr
+*.srl
